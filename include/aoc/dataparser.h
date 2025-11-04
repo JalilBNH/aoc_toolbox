@@ -8,9 +8,12 @@
 #include <fstream>
 #include <vector>
 #include <tuple>
+#include <sstream>
+
 
 namespace aoc {
     std::tuple<std::vector<int>, std::vector<int>> twoColsParser(std::string inputPath);
+    std::vector<std::vector<int>> stringToIntTab(std::string inputPath);
 }
 
 #endif // DATAPARSER_H

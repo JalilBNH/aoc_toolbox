@@ -22,5 +22,29 @@ namespace aoc
 
         return {list1, list2};
     }
+
+    std::vector<std::vector<int>> stringToIntTab(std::string inputPath)
+    {
+        std::ifstream inputFile(inputPath);
+        std::string inputLine;
+        int number;
+
+        std::vector<std::vector<int>> input;
+
+        while (getline(inputFile, inputLine))
+        {
+            std::stringstream iss(inputLine);
+            std::vector<int> line;
+
+            while (iss >> number)
+            {
+                line.push_back(number);
+            }
+            input.push_back(line);
+        }
+
+        inputFile.close();
+        return input;
+    }
     
 }
