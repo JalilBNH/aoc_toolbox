@@ -46,5 +46,20 @@ namespace aoc
         inputFile.close();
         return input;
     }
+
+    std::string txtToString(std::string inputPath)
+    {
+        std::ifstream inputFile(inputPath);
+        std::string input;
+        char c;
+
+        while (inputFile.get(c))
+        {
+            input += c;
+        }
+        inputFile.close();
+
+        return input;
+    }
     
 }
